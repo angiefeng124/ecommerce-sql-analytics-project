@@ -1,3 +1,26 @@
+/*
+=========================================================
+Sales Analytics Queries
+
+Purpose:
+- Analyze sales trends over time
+- Evaluate product performance
+- Identify category contribution
+- Segment customers based on purchasing behavior
+
+Techniques:
+- Aggregations
+- Window Functions
+- CTEs
+- Year-over-Year Analysis
+- Customer Segmentation
+
+Database:
+DataWareHouseAnalytics2
+
+=========================================================
+*/
+
 USE DataWareHouseAnalytics2
 --Change over time
 SELECT 
