@@ -37,7 +37,11 @@ Business-ready views for analytics
 - Sales growth analysis
 
 
-## Dashboard
+## Tableau Dashboard
+<img width="2514" height="1470" alt="image" src="https://github.com/user-attachments/assets/52262cec-56b0-4561-a5bb-a67758fd7dcd" />
+
+[View on Tableau Public]
+https://public.tableau.com/views/ExecutiveOverview_17862080854020/Dashboard1?:language=en-US&:sid=&:redirect=auth&publish=yes&showOnboarding=true&:display_count=n&:origin=viz_share_link
 
 Tableau dashboard provides interactive visualization of:
 
