@@ -1,5 +1,5 @@
 USE DataWareHouseAnalytics2
---change over time
+--Change over time
 SELECT 
 YEAR(order_date) as order_year,
 MONTH(order_date) as order_month,
@@ -11,9 +11,8 @@ where order_date is NOT NULL
 group by YEAR(order_date), MONTH(order_date)
 order by YEAR(order_date), MONTH(order_date)
 
---cumulative analysis
---calculate he total sales per month
---and the running total of sales over time
+--Cumulative analysis
+--calculate he total sales per month and the running total of sales over time
 SELECT
 order_date,
 total_sales,
@@ -50,7 +49,7 @@ CASE WHEN current_sales - AVG(current_sales) OVER (PARTITION BY product_name) > 
      WHEN current_sales - AVG(current_sales) OVER (PARTITION BY product_name) < 0 THEN 'Below Avg'
      ELSE 'Avg'
 END avg_change,
---year over year analysis
+--Year over year analysis
 LAG(current_sales) OVER (PARTITION BY product_name ORDER BY order_year) as py_years,
 current_sales - LAG(current_sales) OVER (PARTITION BY product_name ORDER BY order_year) as diff_py,
 CASE WHEN current_sales - LAG(current_sales) OVER (PARTITION BY product_name ORDER BY order_year) > 0 THEN 'Increase'
@@ -60,7 +59,7 @@ END py_change
 FROM yearly_product_sales
 ORDER BY product_name, order_year;
 
---which categories contribute the most to overall sales
+--Which categories contribute the most to overall sales
 WITH category_sales AS(
 SELECT
 category,
@@ -78,7 +77,7 @@ CONCAT(ROUND((CAST(total_sales as float) / SUM(total_sales) Over()) * 100, 2), '
 FROM category_sales
 ORDER BY total_sales DESC;
 
---segment products into cost ranges and count how many products fall into each segment
+--Segment products into cost ranges and count how many products fall into each segment
 WITH product_segments AS (
 SELECT 
 product_key,
@@ -131,5 +130,8 @@ FROM (
 )t 
 GROUP BY customer_segment
 ORDER BY total_customers DESC
+
+
+
 
 
