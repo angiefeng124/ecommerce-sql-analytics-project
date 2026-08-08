@@ -1,5 +1,5 @@
 /*
-=========
+================================================================================
 Customer Report
 Purpose:
 - This report consolidates key customer metrics and behaviors
@@ -16,7 +16,7 @@ Highlights:
 - recency (months since last order)
 - average order value
 - average monthly spend
-=========
+=================================================================================
 */
 CREATE OR ALTER VIEW gold.report_customers AS
 WITH base_query AS(
