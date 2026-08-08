@@ -17,6 +17,16 @@ business reports to answer key sales questions.
 - GitHub
 
 
+## Skills Demonstrated
+
+- CTEs
+- Window Functions
+- Aggregations
+- Views
+- Data Modeling
+- Business Reporting
+
+
 ## Project Structure
 
 Bronze Layer:
