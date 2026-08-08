@@ -1,5 +1,5 @@
 /*
-=====
+===========================================================================================
 Product Report
 Purpose:
 - This report consolidates key product metrics and behaviors.
@@ -16,7 +16,7 @@ Highlights:
 - recency (months since last sale)
 - average order revenue (AOR)
 - average monthly revenue
-=====
+===========================================================================================
 */
 CREATE OR ALTER VIEW gold.report_products AS 
 WITH base_query AS (
